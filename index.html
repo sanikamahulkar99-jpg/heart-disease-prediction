@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Heart Disease Prediction</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- Floating decorative hearts -->
+
+<div class="floating-heart heart-one">♥</div>
+
+<div class="floating-heart heart-two">♥</div>
+
+<div class="floating-heart heart-three">♥</div>
+
+<div class="floating-heart heart-four">♥</div>
+
+
+<div class="container">
+
+
+    <!-- =================================
+         HERO SECTION
+    ================================== -->
+
+    <section class="hero">
+
+
+        <div class="hero-text">
+
+            <span class="badge">
+                ❤️ AI POWERED HEALTH ANALYSIS
+            </span>
+
+
+            <h1>
+                Heart Disease
+                <span>Prediction</span>
+            </h1>
+
+
+            <p>
+                Enter the required health information
+                and let our machine-learning model
+                generate a prediction based on the
+                provided data.
+            </p>
+
+
+            <!-- Heartbeat line -->
+
+            <div class="heartbeat-line">
+
+                <span></span>
+
+                <svg viewBox="0 0 500 100">
+
+                    <polyline
+                        points="
+                        0,50
+                        80,50
+                        110,50
+                        125,20
+                        140,80
+                        155,50
+                        210,50
+                        230,50
+                        245,10
+                        265,90
+                        280,50
+                        350,50
+                        500,50
+                        "
+                    />
+
+                </svg>
+
+            </div>
+
+        </div>
+
+
+        <!-- Heart illustration -->
+
+        <div class="hero-heart">
+
+            <div class="heart-glow"></div>
+
+            <div class="big-heart">
+                ♥
+            </div>
+
+            <div class="pulse-ring ring-one"></div>
+
+            <div class="pulse-ring ring-two"></div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================
+         INFORMATION CARDS
+    ================================== -->
+
+    <div class="info-cards">
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                ❤️
+            </div>
+
+            <div>
+                <strong>Heart Health</strong>
+
+                <small>
+                    Health parameter analysis
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                🧠
+            </div>
+
+            <div>
+                <strong>Machine Learning</strong>
+
+                <small>
+                    AI based prediction
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="info-icon">
+                📊
+            </div>
+
+            <div>
+                <strong>Data Analysis</strong>
+
+                <small>
+                    Model probability
+                </small>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         PREDICTION CARD
+    ================================== -->
+
+    <div class="prediction-card">
+
+
+        <div class="section-title">
+
+            <div class="section-heart">
+                ♥
+            </div>
+
+            <div>
+
+                <h2>
+                    Patient Information
+                </h2>
+
+                <p>
+                    Enter the following parameters
+                    to generate a prediction.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <form id="predictionForm">
+
+
+            <!-- AGE -->
+
+            <div class="form-group">
+
+                <label>
+                    Age
+                </label>
+
+                <input
+                    type="number"
+                    name="age"
+                    min="1"
+                    max="120"
+                    placeholder="Enter age"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- SEX -->
+
+            <div class="form-group">
+
+                <label>
+                    Sex
+                </label>
+
+                <select name="sex" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="1">
+                        Male
+                    </option>
+
+                    <option value="0">
+                        Female
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- CHEST PAIN -->
+
+            <div class="form-group">
+
+                <label>
+                    Chest Pain Type
+                </label>
+
+                <select name="cp" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="0">
+                        Typical Angina
+                    </option>
+
+                    <option value="1">
+                        Atypical Angina
+                    </option>
+
+                    <option value="2">
+                        Non-anginal Pain
+                    </option>
+
+                    <option value="3">
+                        Asymptomatic
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- BLOOD PRESSURE -->
+
+            <div class="form-group">
+
+                <label>
+                    Resting Blood Pressure
+                </label>
+
+                <input
+                    type="number"
+                    name="trestbps"
+                    placeholder="e.g. 120"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- CHOLESTEROL -->
+
+            <div class="form-group">
+
+                <label>
+                    Cholesterol
+                </label>
+
+                <input
+                    type="number"
+                    name="chol"
+                    placeholder="e.g. 200"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- BLOOD SUGAR -->
+
+            <div class="form-group">
+
+                <label>
+                    Fasting Blood Sugar
+                </label>
+
+                <select name="fbs" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="1">
+                        Greater than 120 mg/dl
+                    </option>
+
+                    <option value="0">
+                        120 mg/dl or below
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- ECG -->
+
+            <div class="form-group">
+
+                <label>
+                    Resting ECG
+                </label>
+
+                <select name="restecg" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="0">
+                        Normal
+                    </option>
+
+                    <option value="1">
+                        ST-T Wave Abnormality
+                    </option>
+
+                    <option value="2">
+                        Left Ventricular Hypertrophy
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- MAX HEART RATE -->
+
+            <div class="form-group">
+
+                <label>
+                    Maximum Heart Rate
+                </label>
+
+                <input
+                    type="number"
+                    name="thalach"
+                    placeholder="e.g. 150"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- EXERCISE ANGINA -->
+
+            <div class="form-group">
+
+                <label>
+                    Exercise Induced Angina
+                </label>
+
+                <select name="exang" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="1">
+                        Yes
+                    </option>
+
+                    <option value="0">
+                        No
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- OLDPEAK -->
+
+            <div class="form-group">
+
+                <label>
+                    Oldpeak
+                </label>
+
+                <input
+                    type="number"
+                    step="0.1"
+                    name="oldpeak"
+                    placeholder="e.g. 1.0"
+                    required
+                >
+
+            </div>
+
+
+
+            <!-- SLOPE -->
+
+            <div class="form-group">
+
+                <label>
+                    ST Slope
+                </label>
+
+                <select name="slope" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="0">
+                        Upsloping
+                    </option>
+
+                    <option value="1">
+                        Flat
+                    </option>
+
+                    <option value="2">
+                        Downsloping
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- CA -->
+
+            <div class="form-group">
+
+                <label>
+                    Number of Major Vessels
+                </label>
+
+                <select name="ca" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="0">0</option>
+
+                    <option value="1">1</option>
+
+                    <option value="2">2</option>
+
+                    <option value="3">3</option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- THAL -->
+
+            <div class="form-group">
+
+                <label>
+                    Thalassemia
+                </label>
+
+                <select name="thal" required>
+
+                    <option value="">
+                        Select
+                    </option>
+
+                    <option value="0">
+                        Normal
+                    </option>
+
+                    <option value="1">
+                        Fixed Defect
+                    </option>
+
+                    <option value="2">
+                        Reversible Defect
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- BUTTONS -->
+
+            <div class="buttons">
+
+                <button
+                    type="submit"
+                    id="predictButton"
+                >
+
+                    <span id="buttonText">
+                        ❤️ Predict
+                    </span>
+
+                    <span
+                        id="spinner"
+                        class="spinner hidden"
+                    ></span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="resetButton"
+                    class="reset"
+                >
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         RESULT
+    ================================== -->
+
+    <div
+        id="result"
+        class="result hidden"
+    >
+
+        <div id="resultIcon">
+        </div>
+
+
+        <h2>
+            Prediction Result
+        </h2>
+
+
+        <p id="resultText">
+        </p>
+
+
+        <div class="probability-box">
+
+            <span>
+                Model Probability
+            </span>
+
+            <strong id="probability">
+            </strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================
+         DISCLAIMER
+    ================================== -->
+
+    <div class="disclaimer">
+
+        <strong>
+            ❤️ Important:
+        </strong>
+
+        This application is created for
+        educational and informational purposes.
+        The prediction is generated by a
+        machine-learning model and is not a
+        medical diagnosis or substitute for
+        professional medical advice.
+
+    </div>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

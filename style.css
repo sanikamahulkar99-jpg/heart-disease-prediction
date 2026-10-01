@@ -1,0 +1,1095 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    color: #18324a;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(92, 190, 224, 0.35),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(240, 137, 163, 0.30),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 80% 90%,
+            rgba(121, 190, 221, 0.30),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #eaf8fc 0%,
+            #f9f3f7 50%,
+            #edf8fb 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-heart {
+    position: fixed;
+
+    color: rgba(230, 57, 70, 0.16);
+
+    font-size: 45px;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation:
+        floatHeart 6s ease-in-out infinite;
+}
+
+
+.heart-one {
+    top: 12%;
+
+    left: 5%;
+
+    font-size: 35px;
+
+    animation-delay: 0s;
+}
+
+
+.heart-two {
+    top: 35%;
+
+    right: 5%;
+
+    font-size: 55px;
+
+    animation-delay: 1.5s;
+}
+
+
+.heart-three {
+    bottom: 15%;
+
+    left: 8%;
+
+    font-size: 42px;
+
+    animation-delay: 3s;
+}
+
+
+.heart-four {
+    bottom: 35%;
+
+    right: 9%;
+
+    font-size: 30px;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+        opacity: 0.35;
+    }
+
+    50% {
+        transform:
+            translateY(-20px)
+            rotate(5deg);
+
+        opacity: 0.75;
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(-5deg);
+
+        opacity: 0.35;
+    }
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 45px;
+
+    margin-bottom: 25px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.70);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 20px 60px
+        rgba(29, 53, 87, 0.10);
+}
+
+
+/* =========================================
+   HERO TEXT
+========================================= */
+
+.hero-text {
+    flex: 1;
+}
+
+
+.badge {
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(230, 57, 70, 0.08);
+
+    color: #d62839;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    color: #18324a;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 span {
+    color: #e63946;
+}
+
+
+.hero p {
+    max-width: 600px;
+
+    color: #687987;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   HEARTBEAT LINE
+========================================= */
+
+.heartbeat-line {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+}
+
+
+.heartbeat-line svg {
+    width: 100%;
+
+    height: 70px;
+}
+
+
+.heartbeat-line polyline {
+    fill: none;
+
+    stroke: #e63946;
+
+    stroke-width: 3;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    stroke-dasharray: 600;
+
+    stroke-dashoffset: 600;
+
+    animation:
+        heartbeatLine 3s linear infinite;
+}
+
+
+@keyframes heartbeatLine {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* =========================================
+   HERO HEART
+========================================= */
+
+.hero-heart {
+    width: 230px;
+
+    height: 230px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.big-heart {
+    position: relative;
+
+    z-index: 3;
+
+    font-size: 125px;
+
+    color: #e63946;
+
+    line-height: 1;
+
+    text-shadow:
+        0 15px 35px
+        rgba(230, 57, 70, 0.30);
+
+    animation:
+        bigHeartbeat 1.4s infinite;
+}
+
+
+@keyframes bigHeartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.10);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.08);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   HEART GLOW
+========================================= */
+
+.heart-glow {
+    position: absolute;
+
+    width: 130px;
+
+    height: 130px;
+
+    background:
+        rgba(230, 57, 70, 0.20);
+
+    border-radius: 50%;
+
+    filter: blur(30px);
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   PULSE RINGS
+========================================= */
+
+.pulse-ring {
+    position: absolute;
+
+    border:
+        2px solid
+        rgba(230, 57, 70, 0.20);
+
+    border-radius: 50%;
+
+    animation:
+        pulse 2.5s infinite;
+}
+
+
+.ring-one {
+    width: 150px;
+
+    height: 150px;
+}
+
+
+.ring-two {
+    width: 200px;
+
+    height: 200px;
+
+    animation-delay: 0.8s;
+}
+
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(0.8);
+
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.3);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   INFORMATION CARDS
+========================================= */
+
+.info-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.info-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background:
+        rgba(255, 255, 255, 0.70);
+
+    backdrop-filter: blur(15px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 10px 30px
+        rgba(29, 53, 87, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.info-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(29, 53, 87, 0.12);
+}
+
+
+.info-icon {
+    width: 48px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(230, 57, 70, 0.08);
+
+    font-size: 23px;
+}
+
+
+.info-card strong {
+    display: block;
+
+    color: #263f55;
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+
+.info-card small {
+    color: #82909a;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   PREDICTION CARD
+========================================= */
+
+.prediction-card {
+    padding: 35px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.78);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 20px 55px
+        rgba(29, 53, 87, 0.10);
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid #e4edf1;
+}
+
+
+.section-heart {
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        rgba(230, 57, 70, 0.09);
+
+    color: #e63946;
+
+    font-size: 25px;
+}
+
+
+.section-title h2 {
+    font-size: 22px;
+
+    color: #18324a;
+
+    margin-bottom: 4px;
+}
+
+
+.section-title p {
+    color: #7b8b96;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+#predictionForm {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #30485d;
+
+    margin-bottom: 8px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 14px;
+
+    border:
+        1px solid #d7e3e9;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    color: #263d52;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        all 0.25s ease;
+}
+
+
+input::placeholder {
+    color: #a2afb7;
+}
+
+
+input:hover,
+select:hover {
+    border-color: #9bb8c8;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #457b9d;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(69, 123, 157, 0.10);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.buttons {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 8px;
+}
+
+
+button {
+    min-height: 52px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+#predictButton {
+    flex: 1;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d62839,
+            #e85d6a
+        );
+
+    box-shadow:
+        0 8px 22px
+        rgba(214, 40, 57, 0.20);
+}
+
+
+#predictButton:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(214, 40, 57, 0.27);
+}
+
+
+#predictButton:active {
+    transform:
+        translateY(0);
+}
+
+
+#predictButton:disabled {
+    opacity: 0.7;
+
+    cursor: not-allowed;
+}
+
+
+.reset {
+    width: 130px;
+
+    background:
+        #edf3f6;
+
+    color: #425b6d;
+
+    border:
+        1px solid #d7e3e9;
+}
+
+
+.reset:hover {
+    background:
+        #e1eaee;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.spinner {
+    display: inline-block;
+
+    width: 18px;
+
+    height: 18px;
+
+    border:
+        3px solid
+        rgba(255,255,255,0.4);
+
+    border-top-color:
+        white;
+
+    border-radius: 50%;
+
+    animation:
+        spin 0.8s linear infinite;
+
+    vertical-align: middle;
+}
+
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result {
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border:
+        1px solid
+        rgba(69, 123, 157, 0.12);
+
+    box-shadow:
+        0 15px 40px
+        rgba(29, 53, 87, 0.08);
+
+    animation:
+        resultAppear 0.45s ease;
+}
+
+
+@keyframes resultAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+#resultIcon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.result h2 {
+    color: #18324a;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+
+#resultText {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #40576a;
+
+    margin-bottom: 20px;
+}
+
+
+.probability-box {
+    display: inline-flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 15px 35px;
+
+    border-radius: 13px;
+
+    background:
+        #eef8fb;
+
+    border:
+        1px solid #d7e9ef;
+}
+
+
+.probability-box span {
+    color: #778892;
+
+    font-size: 12px;
+}
+
+
+.probability-box strong {
+    color: #1d3557;
+
+    font-size: 27px;
+}
+
+
+/* =========================================
+   DISCLAIMER
+========================================= */
+
+.disclaimer {
+    margin-top: 25px;
+
+    padding: 16px 18px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255, 248, 225, 0.85);
+
+    border-left:
+        4px solid #ffb703;
+
+    color: #665d45;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        padding: 30px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .hero p {
+        margin: auto;
+    }
+
+
+    .heartbeat-line {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-heart {
+        width: 200px;
+
+        height: 200px;
+    }
+
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+
+    .hero {
+        padding: 25px 20px;
+    }
+
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+
+    .hero-heart {
+        transform:
+            scale(0.85);
+    }
+
+
+    .prediction-card {
+        padding: 22px 18px;
+    }
+
+
+    #predictionForm {
+        grid-template-columns: 1fr;
+    }
+
+
+    .buttons {
+        grid-column: auto;
+
+        flex-direction: column;
+    }
+
+
+    .reset {
+        width: 100%;
+    }
+
+
+    .floating-heart {
+        display: none;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+
+    .hero p {
+        font-size: 14px;
+    }
+
+
+    .section-title h2 {
+        font-size: 19px;
+    }
+
+
+    input,
+    select {
+        min-height: 46px;
+    }
+}
